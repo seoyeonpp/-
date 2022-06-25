@@ -111,6 +111,8 @@ table {
   width: 100%;
   background-color: #fff;
   color: #000;
+  -webkit-mix-blend-mode: screen;
+  -moz-mix-blend-mode: screen;
   mix-blend-mode: screen;
   padding: 2.7778vw 0;
 }
