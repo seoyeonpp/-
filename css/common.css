@@ -1,0 +1,298 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Pretendard";
+  font-weight: 400;
+  color: #333;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-style: normal;
+  src: url("webfonts/Pretendard-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-style: normal;
+  src: url("webfonts/Pretendard-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-style: normal;
+  src: url("webfonts/Pretendard-Bold.woff2") format("woff2");
+}
+#wrap {
+  width: 100%;
+  position: relative;
+  scroll-behavior: smooth;
+}
+#wrap section {
+  position: relative;
+  min-height: 100vh;
+}
+#wrap footer .contents {
+  height: 7.4074vw;
+}
+#wrap .contents {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 7.4074vw 0;
+}
+#wrap h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 3.7037vw;
+  font-weight: 700;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  mix-blend-mode: screen;
+  padding: 2.7778vw 0;
+}
+#wrap #main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#wrap #main video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  min-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#wrap #projects .contents {
+  flex-direction: column;
+  gap: 3.7037vw;
+}
+
+.credit {
+  position: absolute;
+  bottom: 1.8519vw;
+  left: 1.8519vw;
+  color: inherit;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+  min-width: 55.5556vw;
+  max-width: 100%;
+  width: calc(100% - 9.2593vw);
+  height: 37.037vw;
+}
+@media screen and (max-width: -6.1111vw) {
+  .options {
+    min-width: -24.4444vw;
+  }
+  .options .option:nth-child(5) {
+    display: none;
+  }
+}
+@media screen and (max-width: -86.1111vw) {
+  .options {
+    min-width: -104.4444vw;
+  }
+  .options .option:nth-child(4) {
+    display: none;
+  }
+}
+@media screen and (max-width: -166.1111vw) {
+  .options {
+    min-width: -184.4444vw;
+  }
+  .options .option:nth-child(3) {
+    display: none;
+  }
+}
+@media screen and (max-width: -246.1111vw) {
+  .options {
+    min-width: -264.4444vw;
+  }
+  .options .option:nth-child(2) {
+    display: none;
+  }
+}
+.options .option {
+  position: relative;
+  overflow: hidden;
+  min-width: 5.5556vw;
+  margin: 0.9259vw;
+  background: var(--optionBackground, var(--defaultBackground, #E6E9ED));
+  background-size: auto 120%;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+.options .option:nth-child(1) {
+  --defaultBackground:#ED5565;
+}
+.options .option:nth-child(2) {
+  --defaultBackground:#FC6E51;
+}
+.options .option:nth-child(3) {
+  --defaultBackground:#FFCE54;
+}
+.options .option:nth-child(4) {
+  --defaultBackground:#2ECC71;
+}
+.options .option:nth-child(5) {
+  --defaultBackground:#5D9CEC;
+}
+.options .option:nth-child(6) {
+  --defaultBackground:#AC92EC;
+}
+.options .option.active {
+  flex-grow: 10000;
+  transform: scale(1);
+  max-width: 55.5556vw;
+  margin: 0vw;
+  border-radius: 3.7037vw;
+  background-size: auto 100%;
+  /*&:active {
+      transform:scale(0.9);
+  }*/
+}
+.options .option.active .shadow {
+  box-shadow: inset 0 -11.1111vw 11.1111vw -11.1111vw black, inset 0 -11.1111vw 11.1111vw -9.2593vw black;
+}
+.options .option.active .label {
+  bottom: 1.8519vw;
+  left: 1.8519vw;
+}
+.options .option.active .label .info > div {
+  left: 0vw;
+  opacity: 1;
+}
+.options .option:not(.active) {
+  flex-grow: 1;
+  border-radius: 2.7778vw;
+}
+.options .option:not(.active) .shadow {
+  bottom: -3.7037vw;
+  box-shadow: inset 0 -11.1111vw 0vw -11.1111vw black, inset 0 -11.1111vw 0vw -9.2593vw black;
+}
+.options .option:not(.active) .label {
+  bottom: 0.9259vw;
+  left: 0.9259vw;
+}
+.options .option:not(.active) .label .info > div {
+  left: 1.8519vw;
+  opacity: 0;
+}
+.options .option .shadow {
+  position: absolute;
+  bottom: 0vw;
+  left: 0vw;
+  right: 0vw;
+  height: 11.1111vw;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+.options .option .label {
+  display: flex;
+  position: absolute;
+  right: 0vw;
+  height: 3.7037vw;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+.options .option .label .icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 3.7037vw;
+  max-width: 3.7037vw;
+  height: 3.7037vw;
+  border-radius: 100%;
+  background-color: white;
+  color: var(--defaultBackground);
+}
+.options .option .label .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 0.9259vw;
+  color: white;
+  white-space: pre;
+}
+.options .option .label .info > div {
+  position: relative;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
+}
+.options .option .label .info .main {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.options .option .label .info .sub {
+  transition-delay: 0.1s;
+}/*# sourceMappingURL=common.css.map */
