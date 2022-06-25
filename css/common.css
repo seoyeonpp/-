@@ -114,6 +114,10 @@ table {
   mix-blend-mode: screen;
   padding: 2.7778vw 0;
 }
+#wrap h4 {
+  font-size: 2.7778vw;
+  font-weight: 500;
+}
 #wrap #main {
   width: 100%;
   height: 100%;
