@@ -291,8 +291,10 @@ table {
 }
 .options .option .label .info .main {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.8519vw;
+  color: #fff;
 }
 .options .option .label .info .sub {
+  color: #fff;
   transition-delay: 0.1s;
 }/*# sourceMappingURL=common.css.map */
