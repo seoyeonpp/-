@@ -252,3 +252,20 @@ $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
         }
     }
 }
+
+.progress {
+    width: 100%;
+    height: 50px;
+}
+.progress-wrap {
+    background: #C4E58E;
+    margin: 20px 0;
+    overflow: hidden;
+    position: relative;
+    .progress-bar {
+        background: #B2D8D8;
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
+}
