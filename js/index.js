@@ -9,36 +9,21 @@ AOS.init();
         init() {
             const self = uiCommon.eventBind;
             self.accordion.init(); // 아코디언
-            self.test.init(); 
         },
-        accordion: {
+        accordion : {
             init() {
-                const $btn = $('.accordion-head button'),
-                    $body = $('.accordion-body');
-
-                $btn.on('click', function () {
-
-                    if (!$(this).hasClass('open')) {
-                        $btn.removeClass('open');
-                        $body.stop().slideUp('fast');
-                        $(this).addClass('open');
-                        $(this).closest('.accordion-wrap').find('.accordion-body').stop().slideDown('fast');
-                    } else {
-                        $btn.removeClass('open');
-                        $body.stop().slideUp('fast');
-                    }
-                });
-            },
-        },
-        test : {
-            init() {
+                $('.descript-area .box-desc').eq(0).fadeIn();
                 $(".option").click(function(){
+                    let thisIdx = $(this).index();
+
                     $(".option").removeClass("active");
                     $(this).addClass("active");
-                    
+
+                    $('.descript-area .box-desc').hide();
+                    $('.descript-area .box-desc').eq(thisIdx).fadeIn();
                 });
             }
-        }
+        },
 
     }
     
