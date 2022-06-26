@@ -19,6 +19,7 @@ time, mark, audio, video {
   font-weight: 400;
   color: #333;
   vertical-align: baseline;
+  box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -95,6 +96,7 @@ table {
 #wrap .contents {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -138,9 +140,12 @@ table {
   -o-object-fit: cover;
      object-fit: cover;
 }
+#wrap #projects {
+  min-height: auto;
+}
 #wrap #projects .contents {
-  flex-direction: column;
   gap: 3.7037vw;
+  padding-bottom: 0;
 }
 #wrap #projects .contents .descript-area {
   width: 100%;
@@ -167,6 +172,87 @@ table {
   font-size: 1.7963vw;
   color: #666;
   line-height: 1.7;
+}
+#wrap #plan {
+  background: #C9D6FF;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #f8f8f8, #C9D6FF);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* Animation */
+}
+#wrap #plan .contents {
+  height: 100vh;
+}
+#wrap #plan .bg-svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+#wrap #plan .waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 150px;
+}
+#wrap #plan .parallax > use {
+  -webkit-animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+          animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+#wrap #plan .parallax > use:nth-child(1) {
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+}
+#wrap #plan .parallax > use:nth-child(2) {
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+#wrap #plan .parallax > use:nth-child(3) {
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+  -webkit-animation-duration: 13s;
+          animation-duration: 13s;
+}
+#wrap #plan .parallax > use:nth-child(4) {
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+}
+@-webkit-keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+@media (max-width: 768px) {
+  #wrap #plan .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  #wrap #plan .content {
+    height: 30vh;
+  }
+  #wrap #plan h1 {
+    font-size: 24px;
+  }
 }
 
 .credit {

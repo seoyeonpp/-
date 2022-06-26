@@ -9,7 +9,6 @@ AOS.init();
         init() {
             const self = uiCommon.eventBind;
             self.accordion.init(); // 아코디언
-            self.progress.init(); // 진행률
         },
         accordion : {
             init() {
@@ -25,24 +24,6 @@ AOS.init();
                 });
             }
         },
-        progress : {
-            init() {
-                // 이부분 다시하기
-                $('#salary').is('.aos-animate') && moveProgressBar();
-
-                function moveProgressBar() {
-                    var getPercent = ($('.progress-wrap').data('progress-percent') / 100);
-                    var getProgressWrapWidth = $('.progress-wrap').width();
-                    var progressTotal = getPercent * getProgressWrapWidth;
-                    var animationLength = 2500;
-                
-                    $('.progress-bar').stop().animate({
-                        left: progressTotal
-                    }, animationLength);
-                }
-            }
-        }
-
     }
     
     uiCommon.init();
