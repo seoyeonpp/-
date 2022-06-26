@@ -118,28 +118,7 @@
                 justify-content: center;
                 align-items: center;
                 & + .plan-card{margin-top: 10px;}
-                &:before {
-                    display: block;
-                    content: "";
-                    position: absolute;
-                    top: 10em;
-                    height: calc(100% - 20em);
-                    width: calc(100% - 20em);
-                    border-top: 2px solid rgba(225,225,225, 0.2);
-                    border-left: 1px solid rgba(225,225,225, 0.1);
-                    border-right: 1px solid rgba(225,225,225, 0.3);
-                    z-index: 2;
-                }
-                .glass {
-                    height: 100%;
-                    width: 100%;
-                    background: #fff;  /* fallback for old browsers */
-                    clip-path: inset(1.2037vw);
-                    filter: blur(13.8889vw);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
+                
                 .conts{
                     display: flex;
                     align-items: center;

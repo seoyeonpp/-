@@ -200,30 +200,6 @@ table {
 #wrap #plan .contents .plan-card + .plan-card {
   margin-top: 10px;
 }
-#wrap #plan .contents .plan-card:before {
-  display: block;
-  content: "";
-  position: absolute;
-  top: 10em;
-  height: calc(100% - 20em);
-  width: calc(100% - 20em);
-  border-top: 2px solid rgba(225, 225, 225, 0.2);
-  border-left: 1px solid rgba(225, 225, 225, 0.1);
-  border-right: 1px solid rgba(225, 225, 225, 0.3);
-  z-index: 2;
-}
-#wrap #plan .contents .plan-card .glass {
-  height: 100%;
-  width: 100%;
-  background: #fff;
-  /* fallback for old browsers */
-  -webkit-clip-path: inset(1.2037vw);
-          clip-path: inset(1.2037vw);
-  filter: blur(13.8889vw);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 #wrap #plan .contents .plan-card .conts {
   display: flex;
   align-items: center;
