@@ -90,6 +90,7 @@ table {
   justify-content: center;
   align-items: center;
   height: 7.4074vw;
+  font-size: 1.4815vw;
 }
 #wrap .contents {
   position: relative;
@@ -107,16 +108,16 @@ table {
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translateY(-50%);
   font-size: 3.7037vw;
   font-weight: 700;
   width: 100%;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   color: #000;
-  -webkit-mix-blend-mode: screen;
-  -moz-mix-blend-mode: screen;
   mix-blend-mode: screen;
-  padding: 2.7778vw 0;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+  transform: translate3d(0, -50%, 0);
+  padding: 4.7778vw 0;
 }
 #wrap h4 {
   font-size: 2.7778vw;
@@ -311,6 +312,9 @@ table {
   background-color: white;
   color: var(--defaultBackground);
 }
+.options .option .label .icon i {
+  font-size: 1.9519vw;
+}
 .options .option .label .info {
   display: flex;
   flex-direction: column;
@@ -332,6 +336,7 @@ table {
 .options .option .label .info .sub {
   color: #fff;
   transition-delay: 0.1s;
+  font-size: 1.3519vw;
 }
 
 .progress {
